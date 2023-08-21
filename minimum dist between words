@@ -1,0 +1,39 @@
+#Find the minimum distance between the given two words
+
+
+
+import java.util.*;
+class stringpro
+{
+    public static int func(String[] a,String one ,String two)
+    {
+        int n = a.length;
+        int max = Integer.MAX_VALUE;
+        int c =0;
+        for(int i = 0;i<n;i++)
+        {
+            if(a[i].equals(one))
+            {
+                c=0;
+                
+            }
+            
+            if(c>0 && a[i].equals(two) )
+            {
+                max = Math.min(max,c);
+            }
+            c++;
+        }
+        return max;
+    }
+    public static void main(String[] args)
+    {
+        String[] a= {"the","quick","brown","fox"};
+        String one ="the";
+        String two = "fox";
+        int n =func(a,one,two);
+        System.out.println(n);
+    }
+}
+
+tried it with various test cases like two duplicates of first input and duplicates of sec inpuyt and designed accordingly
