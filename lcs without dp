@@ -1,0 +1,30 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static int lcs(int m , int n,String o ,String t)
+    {
+        if(m==0 || n==0)
+        {
+            return 0;
+            
+        }
+        if(o.charAt(m-1) == t.charAt(n-1))
+        {
+            return 1+ lcs(m-1,n-1,o,t);
+        }
+        else
+        {
+            return Math.max(lcs(m-1,n,o,t),lcs(m,n-1,o,t));
+        }
+    }
+    public static void main(String[] args) {
+        String o = "abcab";
+        String t = "aecb";
+        int m = 5;
+        int n =4;
+        int out = lcs(m,n,o,t);
+        System.out.println(out);
+    }
+}
+output :3
