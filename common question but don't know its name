@@ -1,0 +1,24 @@
+class another
+{
+    public static void check(String s,String out,int m)
+    {
+        String a=s+s;
+        int k = out.length();
+        int i =0;
+        for(int j = k;j<2*m;j++)
+        {
+            if(out.equals(a.substring(i,j))){
+                System.out.print("exist");
+            }
+            i++;
+        }
+        return ;
+    }
+    public static void main(String[] args)
+    {
+        String s = "satya";
+        int m = 5;
+        String out = "tyasa";
+        check(s,out,m);
+    }
+}
